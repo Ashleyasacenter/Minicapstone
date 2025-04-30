@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.bg-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('sjc.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Darker transparent overlay for better contrast */
+}
+
+/* Login Box */
+.login-box {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    padding: 50px; /* Increased padding for better spacing */
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px; /* Slightly larger border radius */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    text-align: center;
+    z-index: 1; /* Ensure the box is above the overlay */
+}
+
+/* Logo */
+.login-logo img {
+    width: 80px;
+    margin-bottom: 15px; /* Space below the logo */
+}
+
+.login-logo h1 {
+    font-size: 24px; /* Increased font size */
+    font-weight: bold;
+    color: #333; /* Darker color for better readability */
+}
+
+.login-logo h2 {
+    font-size: 16px; /* Increased font size */
+    color: #555; /* Slightly lighter color */
+    margin-bottom: 20px; /* Space below the subtitle */
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 15px; /* Space between input fields */
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px; /* Added padding for better touch targets */
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Increased font size */
+    transition: border-color 0.3s ease; /* Transition for focus effect */
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button */
+.btn-primary {
+    width: 100%;
+    padding: 12px; /* Increased padding for better touch targets */
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white; /* Ensure text is white */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for hover effect */
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.btn-primary:active {
+    transform: translateY(0); /* Reset lift effect on click */
+}
+
+/* Alert Message */
+.alert {
+    margin-top: 15px; /* Space above the alert */
+    padding: 10px;
+    background-color: #f8d7da; /* Light red background for error messages */
+    color: #721c24; /* Dark red text color */
+    border: 1px solid #f5c6cb; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-box {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .login-logo h1 {
+        font-size: 20px; /* Smaller font size for smaller screens */
+    }
+
+    .login-logo h2 {
+        font-size: 14px; /* Smaller font size for smaller screens */
+    }
+}
