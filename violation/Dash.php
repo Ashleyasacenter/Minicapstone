@@ -65,12 +65,6 @@ $student_violations = $pdo->query("SELECT v.*, s.student_id, s.first_name, s.las
 		</ul>
 		<ul class="side-menu">
 			<li>
-				<a href="#">
-					<i class='bx bxs-cog'></i>
-					<span class="text">Settings</span>
-				</a>
-			</li>
-			<li>
 				<a href="logout.php" class="logout"> <!-- Changed from # to logout.php -->
 					<i class='bx bxs-log-out-circle'></i>
 					<span class="text">Logout</span>
@@ -84,17 +78,12 @@ $student_violations = $pdo->query("SELECT v.*, s.student_id, s.first_name, s.las
 	<section id="content">
 		<!-- NAVBAR -->
 		<nav>
-			<i class='bx bx-menu'></i>
-			<a href="#" class="nav-link">Categories</a>
 			<form action="#">
 				<div class="form-input">
 					<input type="search" placeholder="Search...">
 					<button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
 				</div>
 			</form>
-			<a href="#" class="notification">
-				<i class='bx bxs-bell'></i>
-			</a>
 		</nav>
 		<!-- NAVBAR -->
 
@@ -115,19 +104,6 @@ $student_violations = $pdo->query("SELECT v.*, s.student_id, s.first_name, s.las
 				</div>
 			</div>
 
-			<ul class="box-info">
-				<li>
-					<i class='bx bxs-icon-whistle'></i>
-					<span class="text">
-						<p>Total Violations</p>
-					</span>
-				</li>
-				<li>
-					<i class='bx bxs-group'></i>
-					<span class="text">
-						<p>Total Students</p>
-					</span>
-				</li>
 				<li>
 					<i class='bx bxs-user-account'></i>
 					<span class="text">
@@ -135,77 +111,6 @@ $student_violations = $pdo->query("SELECT v.*, s.student_id, s.first_name, s.las
 					</span>
 				</li>
 			</ul>
-
-			<div class="table-data">
-				<div class="order">
-					<div class="head">
-						<h3>Student Violation List</h3>
-						<i class='bx bx-search'></i>
-						<i class='bx bx-filter'></i>
-					</div>
-					<table>
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Name</th>
-								<th>Date</th>
-								<th>Year Level</th> <!-- Changed from Time to Year Level -->
-								<th>Violation</th>
-								<th>Status</th>
-							</tr>
-						</thead>
-						<tbody id="violation-list">
-							<!-- Violations will be added here dynamically -->
-						</tbody>
-					</table>
-				</div>
-				<div class="todo">
-					<div class="head">
-						<h3>Add Student Violation</h3>
-						<button id="add-violation-btn" class="add-btn"><i class='bx bx-plus'></i></button>
-					</div>
-					<div id="violation-form" style="display: none;">
-						<form id="add-violation-form">
-							<div class="form-group">
-								<label for="student-id">Student ID:</label>
-								<input type="text" id="student-id" required>
-							</div>
-							<div class="form-group">
-								<label for="student-name">Name:</label>
-								<input type="text" id="student-name" required>
-							</div>
-							<div class="form-group">
-								<label for="violation-date">Date:</label>
-								<input type="date" id="violation-date" required>
-							</div>
-							<div class="form-group">
-								<label for="year-level">Year Level:</label>
-								<select id="year-level" required>
-									<option value="">Select Year Level</option>
-									<option value="1">1st Year</option>
-									<option value="2">2nd Year</option>
-									<option value="3">3rd Year</option>
-									<option value="4">4th Year</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="violation-type">Violation:</label>
-								<select id="violation-type" required>
-									<option value="">Select violation</option>
-									<option value="Printed Inner">Printed Inner</option>
-									<option value="Printed Socks">Printed Socks</option>
-									<option value="Ordinary">Ordinary</option>
-									<option value="No Inner">No Inner</option>
-									<option value="No ID">No ID</option>
-									<option value="No Logo">No Logo</option>
-									<option value="No Socks/foot socks">No Socks/foot socks</option>
-									<option value="Piercing">Piercing</option>
-									<option value="Hair Cut">Hair Cut</option>
-									<option value="Hair Tie">Hair Tie</option>
-								</select>
-							</div>
-							<button type="submit" class="submit-btn">Add Violation</button>
-						</form>
 					</div>
 				</div>
 			</div>
